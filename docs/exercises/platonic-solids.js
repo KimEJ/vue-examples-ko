@@ -1,7 +1,7 @@
 const solids = ['정사면체', '정육면체', '정팔면체', '정십이면체', '정이십면체']
 
 export default {
-  question: `플라토닉 고체의 개수는 ${solids.length}개 입니다.`,
+  question: `플라토닉 고체 ${solids.length}개의 이름을 맞춰보세요.`,
   size: solids.length,
 
   createChecker() {

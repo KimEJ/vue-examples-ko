@@ -1,9 +1,9 @@
 <script setup>
 import { computed, reactive, ref, watch } from 'vue'
-import chemistry from './elements.js'
-import music from './abbey-road.js'
-import geometry from './platonic-solids.js'
-import antiquity from './seven-wonders.js'
+import 화학 from './elements.js'
+import 음악 from './abbey-road.js'
+import 기하학 from './platonic-solids.js'
+import 고대사 from './seven-wonders.js'
 
 const topic = ref('화학')
 
