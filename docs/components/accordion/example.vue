@@ -1,16 +1,16 @@
 <template>
   <basic-accordion>
-    <basic-accordion-panel title="First">
-      First panel content
+    <basic-accordion-panel title="첫 번째">
+      첫 번째 패널 내용
     </basic-accordion-panel>
-    <basic-accordion-panel title="Second">
+    <basic-accordion-panel title="두 번째">
       <template v-for="i in 20">
-        Second panel content {{ i }}
+        두 번째 패널 내용 {{ i }}
         <br v-if="i !== 20">
       </template>
     </basic-accordion-panel>
-    <basic-accordion-panel title="Third">
-      Third panel content
+    <basic-accordion-panel title="세 번째">
+      세 번째 패널 내용
     </basic-accordion-panel>
   </basic-accordion>
 </template>
