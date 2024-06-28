@@ -5,14 +5,14 @@ import music from './abbey-road.js'
 import geometry from './platonic-solids.js'
 import antiquity from './seven-wonders.js'
 
-const topic = ref('Chemistry')
+const topic = ref('화학')
 
 const question = computed(() => {
   return {
-    antiquity,
-    chemistry,
-    geometry,
-    music
+    고대사,
+    화학,
+    기하학,
+    음악
   }[topic.value.toLowerCase()]
 })
 
@@ -68,12 +68,12 @@ function reset() {
 
 <template>
   <label>
-    Topic:
+    주제:
     <select v-model="topic">
-      <option>Antiquity</option>
-      <option>Chemistry</option>
-      <option>Geometry</option>
-      <option>Music</option>
+      <option>고대사</option>
+      <option>화학</option>
+      <option>기하학</option>
+      <option>음악</option>
     </select>
   </label>
   <h3>
@@ -85,7 +85,7 @@ function reset() {
         {{ matched.size }} / {{ question.size }}
       </div>
       <div>
-        {{ timeTaken }}s
+        {{ timeTaken }}초
       </div>
     </div>
     <input v-model="guess" @input="checkGuess" :disabled="matched.size === question.size">
@@ -100,7 +100,7 @@ function reset() {
     </div>
   </div>
   <button @click="reset">
-    Reset
+    초기화
   </button>
 </template>
 

@@ -176,10 +176,10 @@ Flowbite는 개념적으로 Bootstrap이나 Bulma와 유사하지만, Tailwind C
     </tr>
     <tr>
       <td>Flowbite</td>
-      <td><a href="https://flowbite.com/" target="_blank" rel="noopener noreferrer">docs</a></td>
-      <td><a href="https://www.npmjs.com/package/flowbite" target="_blank" rel="noopener noreferrer">npm</a> <img alt="npm monthly downloads" src="https://img.shields.io/npm/dm/flowbite?color=%235588cc&label="></td>
+      <td><a href="https://flowbite.com/" target="_blank" rel="noopener noreferrer">문서</a></td>
+      <td><a href="https://www.npmjs.com/package/flowbite" target="_blank" rel="noopener noreferrer">npm</a> <img alt="npm 월간 다운로드 수" src="https://img.shields.io/npm/dm/flowbite?color=%235588cc&label="></td>
     </tr>
   </tbody>
 </table>
 
-All of these libraries can be used with Vue, but some of them include their own JavaScript code to add interactivity, which may clash with Vue. You'll likely need to implement that interactivity yourself instead, or use one of the Vue integrations listed earlier in [Styled Vue components](#styled-vue-components).
+이러한 라이브러리들은 Vue와 함께 사용할 수 있지만, 일부는 상호 작용성을 추가하기 위해 자체 JavaScript 코드를 포함하고 있어 Vue와 충돌할 수 있습니다. 대신 직접 상호 작용성을 구현하거나 [스타일이 적용된 Vue 컴포넌트](#styled-vue-components)에서 나열된 Vue 통합 중 하나를 사용해야 할 것입니다.

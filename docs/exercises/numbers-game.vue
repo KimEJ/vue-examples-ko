@@ -108,22 +108,22 @@ function startNewGame() {
 <template>
   <div class="outer">
     <div class="top-bar">
-      <span>How many large numbers?</span>
+      <span>얼마나 많은 큰 숫자를 사용하시겠습니까?</span>
       <select v-model="large">
         <option v-for="(_, n) in 5" :value="n">
           {{ n }}
         </option>
       </select>
       <button @click="startNewGame">
-        New game
+        새 게임
       </button>
     </div>
     <hr>
     <div>
-      <strong>Target:</strong> {{ target }}
+      <strong>목표:</strong> {{ target }}
     </div>
     <div>
-      <strong>Start numbers:</strong> {{ startNumbers.join(', ') }}
+      <strong>시작 숫자:</strong> {{ startNumbers.join(', ') }}
     </div>
     <template v-if="steps.length">
       <ul>
@@ -132,10 +132,10 @@ function startNewGame() {
         </li>
       </ul>
       <button @click="steps.pop()">
-        Back
+        뒤로
       </button>
       <div>
-        <strong>Numbers remaining:</strong> {{ stillRemaining.join(', ')}}
+        <strong>남은 숫자:</strong> {{ stillRemaining.join(', ')}}
       </div>
     </template>
     <input
@@ -144,7 +144,7 @@ function startNewGame() {
       @keypress.enter="onStepEnter"
     >
     <div v-if="stillRemaining.includes(target)">
-      Target reached!
+      목표 달성!
     </div>
   </div>
 </template>

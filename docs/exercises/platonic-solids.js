@@ -1,7 +1,7 @@
-const solids = ['Tetrahedron', 'Cube', 'Octahedron', 'Dodecahedron', 'Icosahedron']
+const solids = ['정사면체', '정육면체', '정팔면체', '정십이면체', '정이십면체']
 
 export default {
-  question: `Name the ${solids.length} Platonic solids`,
+  question: `플라토닉 고체의 개수는 ${solids.length}개 입니다.`,
   size: solids.length,
 
   createChecker() {

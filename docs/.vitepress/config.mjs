@@ -39,22 +39,22 @@ export default defineConfigWithTheme({
         text: '예제 컴포넌트',
         items: [
           {
-            text: 'Checkbox',
+            text: '체크박스',
             link: '/components/checkbox',
           }, {
-            text: 'Radio',
+            text: '라디오 버튼',
             link: '/components/radio',
           }, {
-            text: 'Toggle Switch',
+            text: '토글 스위치',
             link: '/components/toggle-switch',
           }, {
-            text: 'Radio Group',
+            text: '라디오 그룹',
             link: '/components/radio-group'
           }, {
-            text: 'Accordion',
+            text: '아코디언',
             link: '/components/accordion',
           }, {
-            text: 'Tabs',
+            text: '탭',
             link: '/components/tabs',
           }
         ]

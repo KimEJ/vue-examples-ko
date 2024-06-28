@@ -1,11 +1,11 @@
 const wonders = {
-  'Great Pyramid of Giza': ['Great Pyramid', 'Pyramid of Giza'],
-  'Colossus of Rhodes': ['Rhodes Colossus', 'Colosus of Rhodes'],
-  'Lighthouse of Alexandria': ['Alexandria Lighthouse'],
-  'Mausoleum at Halicarnassus': ['Mausoleum at Halicarnasus', 'Mausoleum at Halycarnassus', 'Tomb of Mausolus'],
-  'Temple of Artemis at Ephesus': ['Temple of Artemis'],
-  'Statue of Zeus at Olympia': ['Statue of Zeus'],
-  'Hanging Gardens of Babylon': ['Hanging Gardens']
+  '기자의 대피라미드': ['쿠푸 왕의 피라미드', '기자의 피라미드'],
+  '로도스의 거상': ['로드스의 거상', '로드스의 콜로쏘스'],
+  '알렉산드리아의 등대': ['알렉산드리아 등대'],
+  '마우솔로스 영묘': ['할리카르나소스의 마우솔레움', '마우솔레움', '마우솔로스의 무덤'],
+  '아르테미스 신전': ['아르테미스 신전'],
+  '올림피아의 제우스 상': ['제우스 상'],
+  '바빌론의 공중정원': ['공중정원']
 }
 
 function canonical(str) {
@@ -29,7 +29,7 @@ function canonical(str) {
 }
 
 export default {
-  question: `Name the seven wonders of the ancient world`,
+  question: `고대 세계의 일곱 불가사의의 이름을 말해보세요.`,
   size: 7,
 
   createChecker() {
