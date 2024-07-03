@@ -1,29 +1,20 @@
 const tracks = [
-  'Come Together',
-  'Something',
-  'Maxwell\'s Silver Hammer',
-  'Oh! Darling',
-  'Octopus\'s Garden',
-  'I Want You (She\'s So Heavy)',
-  'Here Comes The Sun',
-  'Because',
-  'You Never Give Me Your Money',
-  'Sun King',
-  'Mean Mr Mustard',
-  'Polythene Pam',
-  'She Came In Through The Bathroom Window',
-  'Golden Slumbers',
-  'Carry That Weight',
-  'The End',
-  'Her Majesty'
+  'Blue Blood',
+  'I AM',
+  'Kitsch',
+  'Lips',
+  'Heroine',
+  'Mine',
+  '섬찟',
+  'NOT YOUR GIRL',
+  '궁금해',
+  'Cherish',
+  'Shine With Me',
 ]
 
 const mappings = {
-  'octopus garden': 'octopuss garden',
-  'octopuses garden': 'octopuss garden',
-  'i want you': 'i want you shes so heavy',
-  'shes so heavy': 'i want you shes so heavy',
-  'mean mister mustard': 'mean mr mustard',
+  'hypnosis': '섬찟',
+  'next page': '궁금해',
 }
 
 function canonical(str) {
@@ -35,7 +26,7 @@ function canonical(str) {
 const canon = tracks.map(canonical)
 
 export default {
-  question: `Name the ${tracks.length} tracks on The Beatles album Abbey Road`,
+  question: `아이브 정규 1집 "I've IVE"의 ${tracks.length}곡의 이름을 말해주세요.`,
   size: tracks.length,
 
   createChecker() {

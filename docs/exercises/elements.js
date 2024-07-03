@@ -124,7 +124,7 @@ const elements = [
 const lastLetters = [...new Set(elements.map(el => el.slice(-1)))].sort()
 
 export default {
-  question: `Name ${lastLetters.length} chemical elements with different last letters`,
+  question: `서로 다른 마지막 글자를 가진 ${lastLetters.length}개의 화학 원소의 이름을 말해보세요.(영어로)`,
   size: lastLetters.length,
 
   createChecker() {
