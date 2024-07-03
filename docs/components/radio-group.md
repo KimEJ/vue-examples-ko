@@ -6,15 +6,15 @@ import BasicRadioGroup from './radio-group/radio-group.vue'
 const radioValue = ref('First')
 const options = ['First', 'Second', 'Third']
 </script>
-# Radio Group
+# 라디오 그룹
 
 :::info
-This page has not yet been updated to use the `defineModel` macro, which was added in Vue 3.4. The techniques described here should still work, but in some cases it might be better to use `defineModel` instead.
+이 페이지는 아직 Vue 3.4에서 추가된 `defineModel` 매크로를 사용하지 않도록 업데이트되지 않았습니다. 여기에 설명된 기술은 여전히 작동하지만 일부 경우에는 `defineModel`을 대신 사용하는 것이 더 좋을 수 있습니다.
 :::
 
-## Radio Group Example
+## 라디오 그룹 예제
 
-A radio group component acts as a wrapper around multiple radio components, with a single `v-model` on the wrapper:
+라디오 그룹 컴포넌트는 여러 라디오 컴포넌트를 감싸는 래퍼 역할을 하며, 래퍼에는 단일 `v-model`이 있습니다:
 
 ```vue
 <template>
@@ -23,7 +23,7 @@ A radio group component acts as a wrapper around multiple radio components, with
     <basic-radio value="Second" />
     <basic-radio value="Third" />
   </basic-radio-group>
-  <pre>Bound value: {{ radioValue }}</pre>
+  <pre>바인딩된 값: {{ radioValue }}</pre>
 </template>
 
 <script setup>
@@ -35,34 +35,32 @@ const radioValue = ref('First')
 </script>
 ```
 
-It would look something like this:
+다음과 같이 보일 것입니다:
 
 <live-example>
   <basic-radio-group v-model="radioValue">
     <basic-radio v-for="option in options" :value="option" />
   </basic-radio-group>
-  <pre>Bound value: {{ radioValue }}</pre>
+  <pre>바인딩된 값: {{ radioValue }}</pre>
 </live-example>
 
-[SFC Playground](https://play.vuejs.org/#eNqVU8tOwzAQ/JVVLglS2tyjUIlKwAkJAeJCOJR4W4wa2zh2JFTl31nbaaI+aMslkdezs7MzySa6UWraWozyqGgqzZWBBo1Vs1LwWkltYAMal9DBUssaYoLGw9V80fDqacG47G+n2VhyrMeg91padQTv631TKSopGgPaXbwu1hbh2slI4juuGxNflaLIglwSSgeDtVovDNIJoPhwpBPfPFn5ce2klgzX12U0UpaRR+/ioXVXhPODygiyU6BnJJ3sHOrlk+sRVGQH8kJdaZzNpRUsNOawIetHA7quyBzErT6sG6XRruOncuTiCyuzF+XWaqWlashlhksu8NGdko3TtRUTFtT4bblGloPRZCHVulJ0lMdOZA/ObCILE5N4LJ6LjvF2ayUXyhowP8p56BnIw70gPSeV863X/t0nW2SB7S+/hi/ulGmVrEkGstQ51HJGQfzPP6/XR3i5iVhzM3Dd0qFJ3mKrGK2Qj3zxu2/pde24nA66g4gVGkiuxvnGahEkT0c+LyR1T3IBEm/l0OMkJUc0pOEDISX9FpcH3KylGX6Kw6i6X+0EmxM=)
-
-`radio-group.vue` would use `provide` to communicate with `radio.vue`:
+`radio-group.vue`는 `provide`를 사용하여 `radio.vue`와 통신합니다:
 
 <<< @/components/radio-group/radio-group.vue
 
-The `radio.vue` here is specially written to use `inject` instead of a `modelValue`:
+여기서 `radio.vue`는 `modelValue` 대신 `inject`을 사용하여 특별히 작성되었습니다:
 
 <<< @/components/radio-group/radio.vue
 
-Support for direct use of `v-model` with the `radio` component has been omitted from this example. That technique is shown in the [Radio example](./radio). The two can be combined by using a default value with `inject` and then checking whether that value is set.
+이 예제에서는 `radio` 컴포넌트와 `v-model`의 직접적인 사용을 지원하지 않았습니다. 이 기술은 [라디오 예제](./radio)에서 보여줍니다. 두 가지 기술을 결합하기 위해 `inject`과 함께 기본값을 사용한 다음 해당 값이 설정되었는지 확인할 수 있습니다.
 
-## Vue Patterns
+## Vue 패턴
 
-See [Coupled Components with `provide`/`inject`](../patterns/coupled-components-with-provide-inject)
+[provide/inject를 사용한 결합된 컴포넌트](../patterns/coupled-components-with-provide-inject)를 참조하세요.
 
-Apart from the naming choices, there's nothing in this `radio-group.vue` implementation that assumes the children are radio buttons. It could be made to work with checkboxes, toggle switches or any similar components that involve picking from a list of options.
+이 `radio-group.vue` 구현에서는 이름 선택 외에도, 자식이 라디오 버튼인 것을 가정하는 내용이 없습니다. 체크박스, 토글 스위치 또는 옵션 목록에서 선택하는 기타 유사한 컴포넌트와 함께 작동하도록 만들 수 있습니다.
 
-It could be argued that injecting a `computed` like this is violating one-way data flow for updates, or at least it gives that impression from the perspective of `radio.vue`. You could inject a separate `ref` and update function if you prefer.
+이렇게 `computed`를 `inject`하는 것은 업데이트에 대한 일방향 데이터 흐름을 위반한다는 주장이나 적어도 `radio.vue`의 관점에서는 그런 인상을 줄 수 있다는 주장이 있을 수 있습니다. 원한다면 별도의 `ref`와 업데이트 함수를 `inject`할 수도 있습니다.
 
 <!--
 ## Missing Functionality
@@ -70,9 +68,9 @@ It could be argued that injecting a `computed` like this is violating one-way da
 ## Related Components
 -->
 
-## Alternatives
+## 대안
 
-Another way to implement a radio group would be to use a prop to pass the options rather than a slot. e.g.:
+라디오 그룹을 구현하는 또 다른 방법은 슬롯 대신 옵션을 전달하는 프롭을 사용하는 것입니다. 예를 들면:
 
 ```vue
 <template>
@@ -83,18 +81,19 @@ Another way to implement a radio group would be to use a prop to pass the option
 </template>
 ```
 
-As the radio group is now responsible for creating the child components, it can use props and events for communicating with the children rather than `provide`/`inject`. This does simplify the implementation of the children, but it also forces the radio group to take on responsibility for laying out the radios. Whereas a slot allows other containers, dividers and text to be included along with the radios, the prop-based approach needs everything to be passed in via props. The slot-based approach could be seen as a better separation of concerns, though if you don't need the extra flexibility it may be unnecessary complexity.
+라디오 그룹이 이제 자식 컴포넌트를 생성하는 책임을 지기 때문에, 자식과의 통신에 `provide`/`inject` 대신 프롭과 이벤트를 사용할 수 있습니다. 이는 자식의 구현을 단순화하지만, 라디오 그룹이 라디오를 배치하는 책임을 지게 됩니다. 슬롯을 사용하면 라디오와 함께 다른 컨테이너, 구분선 및 텍스트를 포함할 수 있지만, 프롭 기반 접근 방식은 모든 것을 프롭을 통해 전달해야 합니다. 슬롯 기반 접근 방식은 관심사의 분리를 더 잘 나타낼 수 있다고 볼 수 있지만, 추가적인 유연성이 필요하지 않다면 불필요한 복잡성일 수도 있습니다.
 
-Both approaches could be implemented in the same component.
+두 가지 접근 방식을 동일한 컴포넌트에서 구현할 수 있습니다.
 
-## Libraries
+## 라이브러리
 
-Various libraries include a radio component, including:
+라디오 컴포넌트를 포함한 여러 라이브러리가 있습니다:
 
 - Vuetify - [Radio Group](https://next.vuetifyjs.com/en/components/radio-buttons/)
 - Element Plus - [Radio Group](https://element-plus.org/en-US/component/radio.html)
-- Quasar - [Option Group](https://quasar.dev/vue-components/option-group) (uses a prop-based approach for the options)
+- Quasar - [Option Group](https://quasar.dev/vue-components/option-group) (옵션에 대한 프롭 기반 접근 방식 사용)
 - Ant Design Vue - [Radio Group](https://www.antdv.com/components/radio)
 - Headless UI - [Radio Group](https://headlessui.dev/vue/radio-group)
 - Naive UI - [Radio Group](https://www.naiveui.com/en-US/os-theme/components/radio)
 <!-- - PrimeVue - [RadioButton](https://primefaces.org/primevue/showcase/#/radiobutton) -->
+

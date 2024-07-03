@@ -68,7 +68,7 @@ export default defineConfigWithTheme({
             text: '글로벌 속성 사용하기',
             link: '/patterns/global-properties'
           }, {
-            text: 'provide/inject로 커플된 컴포넌트',
+            text: 'provide/inject를 사용한 결합된 컴포넌트',
             link: '/patterns/coupled-components-with-provide-inject'
           }
         ]
